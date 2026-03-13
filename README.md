@@ -1,4 +1,4 @@
-# iCorp Pro - Business Formation Platform
+#AIR-RISE-INC - Business Formation Platform
 
 A comprehensive Laravel-based business formation platform that helps entrepreneurs start their businesses quickly and efficiently.
 
