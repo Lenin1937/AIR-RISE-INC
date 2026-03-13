@@ -1,0 +1,51 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /dashboard/
+Disallow: /orders/
+Disallow: /documents/
+Disallow: /messages/
+Disallow: /notifications/
+Disallow: /payment-methods/
+Disallow: /profile/
+Disallow: /billing/
+Disallow: /admin/
+Disallow: /shared/
+
+# Prevent crawling of API and internal routes
+Disallow: /api/
+Disallow: /services/green-card-lottery/apply
+Disallow: /services/green-card-lottery/confirmation
+Disallow: /services/green-card-lottery/get
+Disallow: /sanctum/
+Disallow: /login
+Disallow: /register
+Disallow: /forgot-password
+Disallow: /reset-password
+
+# Explicitly allow AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+Sitemap: https://corpius.net/sitemap.xml

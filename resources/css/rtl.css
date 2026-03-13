@@ -1,0 +1,78 @@
+/* RTL Support for Arabic Language */
+
+[dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Flip margins and paddings */
+[dir="rtl"] .ml-auto {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+[dir="rtl"] .mr-auto {
+    margin-right: 0 !important;
+    margin-left: auto !important;
+}
+
+[dir="rtl"] .text-left {
+    text-align: right !important;
+}
+
+[dir="rtl"] .text-right {
+    text-align: left !important;
+}
+
+/* Flex direction */
+[dir="rtl"] .flex-row {
+    flex-direction: row-reverse;
+}
+
+/* Float */
+[dir="rtl"] .float-left {
+    float: right !important;
+}
+
+[dir="rtl"] .float-right {
+    float: left !important;
+}
+
+/* Borders */
+[dir="rtl"] .border-l {
+    border-left: 0 !important;
+    border-right: 1px solid;
+}
+
+[dir="rtl"] .border-r {
+    border-right: 0 !important;
+    border-left: 1px solid;
+}
+
+/* Rounded corners */
+[dir="rtl"] .rounded-l {
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    border-top-right-radius: 0.25rem !important;
+    border-bottom-right-radius: 0.25rem !important;
+}
+
+[dir="rtl"] .rounded-r {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+    border-top-left-radius: 0.25rem !important;
+    border-bottom-left-radius: 0.25rem !important;
+}
+
+/* Transform chevrons and arrows */
+[dir="rtl"] .transform.rotate-180 {
+    transform: rotate(0deg) !important;
+}
+
+[dir="rtl"] svg.chevron-right {
+    transform: scaleX(-1);
+}
+
+[dir="rtl"] svg.chevron-left {
+    transform: scaleX(-1);
+}

@@ -1,0 +1,84 @@
+/* Import RTL Support */
+@import './rtl.css';
+
+/* Import Custom Animations */
+@import './animations.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom iCorp Pro Colors */
+:root {
+    --navy-900: #1e3a8a;
+    --navy-800: #1e40af;
+    --navy-700: #1d4ed8;
+    --yellow-400: #fbbf24;
+    --yellow-500: #f59e0b;
+}
+
+/* Custom Navy Colors */
+.bg-navy-900 {
+    background-color: var(--navy-900);
+}
+
+.bg-navy-800 {
+    background-color: var(--navy-800);
+}
+
+.bg-navy-700 {
+    background-color: var(--navy-700);
+}
+
+.text-navy-900 {
+    color: var(--navy-900);
+}
+
+.text-navy-800 {
+    color: var(--navy-800);
+}
+
+.text-navy-700 {
+    color: var(--navy-700);
+}
+
+.border-navy-900 {
+    border-color: var(--navy-900);
+}
+
+.border-navy-800 {
+    border-color: var(--navy-800);
+}
+
+.hover\:bg-navy-800:hover {
+    background-color: var(--navy-800);
+}
+
+.hover\:text-navy-900:hover {
+    color: var(--navy-900);
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Professional scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--navy-900);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--navy-800);
+}

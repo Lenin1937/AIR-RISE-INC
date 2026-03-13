@@ -1,0 +1,16 @@
+/* Hide Chatwoot "Powered by" branding */
+.branding--footer {
+    display: none !important;
+}
+
+.branding {
+    display: none !important;
+}
+
+.branding-link {
+    display: none !important;
+}
+
+a[href*="chatwoot.com"] {
+    display: none !important;
+}

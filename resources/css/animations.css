@@ -1,0 +1,218 @@
+/* Custom Animations for Home Page */
+
+/* Scroll-triggered animations */
+.animate-on-scroll {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-on-scroll.animate-in {
+    opacity: 1;
+}
+
+/* Fade in with slide up */
+.fade-in-up {
+    transform: translateY(40px);
+}
+
+.fade-in-up.animate-in {
+    transform: translateY(0);
+}
+
+/* Fade in with slide from right */
+.fade-in-right {
+    transform: translateX(40px);
+}
+
+.fade-in-right.animate-in {
+    transform: translateX(0);
+}
+
+/* Fade in with slide from left */
+.fade-in-left {
+    transform: translateX(-40px);
+}
+
+.fade-in-left.animate-in {
+    transform: translateX(0);
+}
+
+/* Scale in animation */
+.scale-in {
+    transform: scale(0.9);
+}
+
+.scale-in.animate-in {
+    transform: scale(1);
+}
+
+/* Shimmer effect for buttons */
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+}
+
+.animate-shimmer {
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(255, 255, 255, 0.3) 50%,
+        transparent 100%
+    );
+    background-size: 200% 200%;
+    animation: shimmer 3s infinite;
+}
+
+/* Slow pulse animation */
+@keyframes pulse-slow {
+    0%, 100% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.15;
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Slow bounce animation */
+@keyframes bounce-slow {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-bounce-slow {
+    animation: bounce-slow 2s ease-in-out infinite;
+}
+
+/* Float animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Gradient animation */
+@keyframes gradient-shift {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+.animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient-shift 8s ease infinite;
+}
+
+/* Rotate animation */
+@keyframes rotate-slow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-rotate-slow {
+    animation: rotate-slow 20s linear infinite;
+}
+
+/* Card hover lift effect */
+.card-hover {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Stagger animation delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }
+.stagger-6 { animation-delay: 0.6s; }
+
+/* Button ripple effect */
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.button-ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.button-ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.button-ripple:active::after {
+    width: 300px;
+    height: 300px;
+    animation: ripple 0.6s ease-out;
+}
+
+/* Glow effect */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(250, 204, 21, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(250, 204, 21, 0.6);
+    }
+}
+
+.animate-glow {
+    animation: glow 2s ease-in-out infinite;
+}
+
+/* Progress bar animation */
+@keyframes progress {
+    from {
+        width: 0%;
+    }
+}
+
+.animate-progress {
+    animation: progress 1.5s ease-out forwards;
+}
